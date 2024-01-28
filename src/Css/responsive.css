@@ -1,0 +1,48 @@
+@media (max-width: 1024px) {
+    .Header{
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px 0;
+        gap: 15px;
+        
+    }
+    .Header .Menu li a{
+        padding: 15px;
+    }
+    .Home .Info{
+        padding: 30px;
+    }
+    .Home .Info img{
+        max-width: 100px;
+    }
+    .Home .Info .title{
+        font-size: 40px;
+    }
+    .Play .Card{
+        width: 70%;
+    }
+    }
+
+@media (max-width: 750px){
+    .Play	{
+        padding: 30px;
+    }
+    .Play .Card{
+     padding: 80px 20px;
+     width: 100%;
+    }
+    .Play .info h3{
+        font-size: 35px;
+    
+    }
+    .Play .info .platform{
+        flex-direction: column;
+    }
+    .Btn-platform{
+        margin-top: 15px;
+        padding: 15px;
+    }
+    .Btn-play{
+        width: 100%;
+    }
+    }

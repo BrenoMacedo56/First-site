@@ -1,0 +1,424 @@
+body {
+    background-color: rgb(116, 82, 82);
+    color: #ffffff;
+}
+
+.Header {
+    height: 80px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.Header img {
+    max-width: 100px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+.Header .Logo {
+    display: flex;
+    gap: 30px;
+}
+
+.Header .Menu {
+    display: flex;
+    gap: 30px;
+}
+
+.Header .Menu li a {
+    padding: 30px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.Home {
+    background-color: rgb(139, 2, 2);
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.Home::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 35%, transparent 65%);
+}
+
+.BackgroundV {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Home .Info {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 80px 80px 80px 170px;
+    height: 100%;
+    min-height: unset; /* remove qualquer altura mínima forçada */
+}
+
+.Home .Info img {
+    max-width: 100px;
+}
+
+.Btn-play, .Btn-platform {
+    background-color: #070707;
+    border: 0.5px solid #ffffff;
+    border-radius: 4px;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    width: 50%;
+    cursor: pointer;
+}
+
+.Btn-play:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.Btn-platform {
+    color: #ffffff;
+    width: 100%;
+}
+
+.Play {
+    background-color: #252424;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30%;
+    align-items: center;
+}
+
+.Play .Game-logo {
+    width: 370px;
+}
+
+.Play .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    width: 300px;
+    border-radius: 9px;
+    padding: 100px;
+    gap: 40px;
+}
+
+.Play .info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Play .info h3 {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.Play .info p {
+    color: #d64848;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Play .info .platform {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+/* Plataforma escondida inicialmente */
+.Play .Btn-platform .platform {
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Plataforma visível ao clicar */
+.Play .Btn-platform .platform.ativo {
+    display: flex;
+    opacity: 1;
+    height: auto;
+}
+
+.Play .Btn-platform .platform li {
+    padding: 20px;
+}
+
+.Play .Btn-platform .platform li:nth-child(1) {
+    border: 1px solid #387a26;
+}
+
+.Play .Btn-platform .platform li:nth-child(2) {
+    border: 1px solid #00439c;
+}
+
+.Play .Btn-platform .platform li:nth-child(3) {
+    border: 1px solid #fcaf17;
+}
+
+.Play .Btn-platform .platform li:nth-child(1):hover {
+    background-color: #387a26;
+}
+
+.Play .Btn-platform .platform li:nth-child(2):hover {
+    background-color: #00439c;
+}
+
+.Play .Btn-platform .platform li:nth-child(3):hover {
+    background-color: #fcaf17;
+}
+
+.Game-title {
+    font-size: 72px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #d6d6d6;
+    margin-top: -10px;
+}
+
+.Features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    color: #ffcece;
+}
+
+.Features li::before {
+    content: '✔ ';
+    color: #e81c1c;
+    font-weight: bold;
+}
+
+/* PLAY PAGE STYLES */
+
+.download-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #252424;
+    justify-content: flex-start;
+    text-align: center; /* ou center se quiser centralizar tudo */
+}
+
+.download-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(90deg, hwb(0 6% 83%), #1e1d1d);
+}
+
+.download-hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.download-hero .subtitle {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.download-card {
+    background-color: #000;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.card-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-header .game-image {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card-header .game-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card-header .game-tagline {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.game-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.platform-selection h3,
+.system-requirements h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.platform-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.platform-option {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 30px;
+    width: 260px;
+    text-align: center;
+}
+
+.platform-option img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.platform-option h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.platform-option p {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    background-color: #d64848;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #ff5a5a;
+}
+
+.system-requirements {
+    margin-top: 40px;
+}
+
+.requirements-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.requirements-col h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.requirements-col ul {
+    list-style: none;
+    padding: 0;
+    color: #aaa;
+}
+
+.requirements-col ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* SUPPORT PAGE STYLES */
+
+.Support {
+    background-color: #1a1a1a;
+    color: #fff;
+    min-height: calc(100vh - 80px);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.Support .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.support-card {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.support-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.support-card a {
+    color: #fcaf17;
+    font-weight: bold;
+    text-decoration: underline;
+}
